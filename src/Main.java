@@ -1,7 +1,9 @@
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(calc("9 / 3"));
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(calc(scanner.nextLine()));
     }
 
 
@@ -13,7 +15,7 @@ public class Main {
         }catch (NumberFormatException e){
             return null;
         }
-        if (result>10||result<(-10)) return null;
+        if (result>10||result<1) return null;
         return result;
     }
 
@@ -68,7 +70,7 @@ public class Main {
             }
             if(firstNumberIsRoman&&secondNumberIsRoman&&result<0) throw new IncorrectNumbers();
             else if (firstNumberIsRoman&&secondNumberIsRoman) {
-                if(result==0) return null;
+                if(result==0) throw new IncorrectNumbers();
                 String[] romanLetters = {"C", "XC", "L",  "X", "IX", "V", "IV", "I" };
                 int[] romanValues = {100,90,50,10,9,5,4,1};
                 StringBuilder romanResult = new StringBuilder();
