@@ -68,9 +68,8 @@ public class Main {
                 case '-': result = firstNumber-secondNumber; break;
                 default : throw new IncorrectNumbers();
             }
-            if(firstNumberIsRoman&&secondNumberIsRoman&&result<0) throw new IncorrectNumbers();
+            if(firstNumberIsRoman&&secondNumberIsRoman&&result<1) throw new IncorrectNumbers();
             else if (firstNumberIsRoman&&secondNumberIsRoman) {
-                if(result==0) throw new IncorrectNumbers();
                 String[] romanLetters = {"C", "XC", "L",  "X", "IX", "V", "IV", "I" };
                 int[] romanValues = {100,90,50,10,9,5,4,1};
                 StringBuilder romanResult = new StringBuilder();
