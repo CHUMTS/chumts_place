@@ -70,8 +70,8 @@ public class Main {
             }
             if(firstNumberIsRoman&&secondNumberIsRoman&&result<1) throw new IncorrectNumbers();
             else if (firstNumberIsRoman&&secondNumberIsRoman) {
-                String[] romanLetters = {"C", "XC", "L",  "X", "IX", "V", "IV", "I" };
-                int[] romanValues = {100,90,50,10,9,5,4,1};
+                String[] romanLetters = {"C", "XC", "L", "XL","X","IX","V", "IV", "I" };
+                int[] romanValues = {100,90,50,40,10,9,5,4,1};
                 StringBuilder romanResult = new StringBuilder();
                 for (int i = 0; i < romanValues.length; i ++) {
                     int currentNum = result/romanValues[i];
